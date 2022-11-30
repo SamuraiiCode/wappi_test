@@ -1,0 +1,29 @@
+{
+  "name": "wappi_test",
+  "version": "1.0.0",
+  "description": "wappi testing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuraiiCode/wappi_test.git"
+  },
+  "keywords": [
+    "cypress",
+    "uitest",
+    "e2e",
+    "automation"
+  ],
+  "author": "WelmarAndres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamuraiiCode/wappi_test/issues"
+  },
+  "homepage": "https://github.com/SamuraiiCode/wappi_test#readme",
+  "devDependencies": {
+    "cypress": "^9.6.1"
+  }
+}
