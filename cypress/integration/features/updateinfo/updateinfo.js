@@ -4,9 +4,6 @@ import homePage from "../../../userinterface/homePage";
 import updateInfo from "../../../userinterface/updateInfo";
 
 
-
-
-
 Given('I login in wappi web page', () => {
    
    cy.visit('https://automation-wappi.vercel.app/profile');
