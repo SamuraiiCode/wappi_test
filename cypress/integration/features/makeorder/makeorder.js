@@ -2,6 +2,7 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import login from "../../../userinterface/login";
 import homePage from "../../../userinterface/homePage";
 import myorders from "../../../userinterface/myorders";
+import coupon from "../../../userinterface/coupon";
 
 
 
@@ -27,7 +28,7 @@ When('I make an order with and without coupon', () => {
     
 })
 
-Then('i see the order in my orders', () => {
+Then('I see the order in my orders', () => {
    myorders.elements.firstProductName();
    myorders.elements.firstProductCoupon();
    myorders.elements.secondProductName();
@@ -35,3 +36,22 @@ Then('i see the order in my orders', () => {
    myorders.elements.thirdProductName();
    myorders.elements.thirdProductCoupon();
 })
+
+
+When('I make an order with the same coupon', () => {
+
+  homePage.elements.CouponProcessTwice();
+
+    
+})
+
+Then('I see an error with the coupon', () => {
+ coupon.elements.ErrorCoupon();
+})
+
+When('I make an order with unexisting coupon', () => {
+
+    homePage.elements.CouponProcessUnexist();
+  
+      
+  })
