@@ -8,5 +8,5 @@ Feature: Login page
     Given I open Wappi page
     When I type credentials
     And I can click on get free coupon
-    Then i see profile
+    Then I see profile
   

@@ -7,9 +7,9 @@ import updateInfo from "../../../userinterface/updateInfo";
 Given('I login in wappi web page', () => {
 
     cy.visit('https://automation-wappi.vercel.app/profile');
-    login.elements.usernameInput();
-    login.elements.passwordInput();
-    login.elements.button();
+    login.elements.enterUsername();
+    login.elements.enterPassword();
+    login.elements.clickButton();
 
 })
 
