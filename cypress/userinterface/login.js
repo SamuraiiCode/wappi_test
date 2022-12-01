@@ -1,9 +1,9 @@
  class Login {
 
     elements = {
-        usernameInput: () => cy.get('#username').type('prueba1'),
-        passwordInput: () => cy.get('#password').type('prueba1123'),
-        button: () => cy.get('#button-login').click(),
+        enterUsername: () => cy.get('#username').type('prueba1'),
+        enterPassword: () => cy.get('#password').type('prueba1123'),
+        clickButton: () => cy.get('#button-login').click(),
         
     }
     

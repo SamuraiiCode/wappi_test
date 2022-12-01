@@ -4,28 +4,22 @@ import homePage from "../../../userinterface/homePage";
 import myorders from "../../../userinterface/myorders";
 import coupon from "../../../userinterface/coupon";
 
-
-
 Given('I login in wappi web page', () => {
    
    cy.visit('https://automation-wappi.vercel.app/profile');
-   login.elements.usernameInput();
-   login.elements.passwordInput();
-   login.elements.button();
+   login.elements.enterUsername();
+   login.elements.enterPassword();
+   login.elements.clickButton();
    
 })
 
 Given('I get free coupon', () => {
-    homePage.elements.FreeCoupon();
-    
+    homePage.elements.clickFreeCoupon();
  })
 
 When('I make an order with and without coupon', () => {
     homePage.elements.CouponProcess();
-    homePage.elements.OrdersPage();
-  
-
-    
+    homePage.elements.OrdersPage();    
 })
 
 Then('I see the order in my orders', () => {
@@ -37,12 +31,8 @@ Then('I see the order in my orders', () => {
    myorders.elements.thirdProductCoupon();
 })
 
-
 When('I make an order with the same coupon', () => {
-
   homePage.elements.CouponProcessTwice();
-
-    
 })
 
 Then('I see an error with the coupon', () => {
@@ -50,8 +40,5 @@ Then('I see an error with the coupon', () => {
 })
 
 When('I make an order with unexisting coupon', () => {
-
     homePage.elements.CouponProcessUnexist();
-  
-      
   })
